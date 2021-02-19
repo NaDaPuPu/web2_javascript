@@ -7,6 +7,32 @@
 
 <body>
     <h1><a href="index.html">WEB</a></h1>
+    <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        if (this.value === 'night') {
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'day';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length) {
+                alist[i].style.color = 'powderblue';
+                i += 1;
+            }
+        } else {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'night';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length) {
+                alist[i].style.color = 'blue';
+                i += 1;
+            }
+        }
+    ">
     <div id="grid">
         <ol>
             <li><a href="1.html">HTML</a></li>
@@ -15,10 +41,19 @@
         </ol>
         <div id="article">
             <h2>JavaScript</h2>
-    
-            <p><a href="https://www.w3.org/RT/html5/" target="_blank" title="html5 specification">Hypertext Markup Language (HTML)</a> 리액트를 배우기 전에 나는 HTML과 CSS, Javascript를 복습하기로 했다.</p>
-            <p style="margin-top: 45px;">요즘 너무 게을러져서 책으로 공부하면 안할 것 같아서 계획표 짜면서 <strong><u>생활코딩</u>으로 공부하기로 했다.</strong></p>
-            <img src="https://s3-ap-northeast-2.amazonaws.com/opentutorials-user-file/module/3135/7648.png">
+            <p>JavaScript(JS)는 가벼운 인터프리터 또는 JIT 컴파일 프로그래밍 언어로, 일급 함수를 지원합니다. 웹 페이지의 스크립트 언어로서 제일 유명하지만 Node.js, Apache CouchDB, Adobe Acrobat처럼 많은 비 브라우저 환경에서도 사용하고 있습니다. JavaScript는 프로토타입 기반의 동적 다중 패러다임 스크립트 언어로, 객체지향형, 명령형, 선언형(함수형 프로그래밍 등) 스타일을 지원합니다. 자세한 내용은 JavaScript에 대하여를 참고하세요.</p>
+            <input type="button" value="night" onclick="
+                var target = document.querySelector('body');
+                if (this.value === 'night') {
+                    target.style.backgroundColor = 'black';
+                    target.style.color = 'white';
+                    this.value = 'day';
+                } else {
+                    target.style.backgroundColor = 'white';
+                    target.style.color = 'black';
+                    this.value = 'night';
+                }
+            ">
         </div>
     </div>
 </body>
