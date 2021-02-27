@@ -12,7 +12,7 @@
         <script>
             var coworkers = {
                 "programmer" : "NaDaPuPu",
-                "eesigner" : "kkh"
+                "designer" : "kkh"
             };
             document.write("Programmer : " + coworkers.programmer + "<br>");
             document.write("Designer : " + coworkers.designer + "<br>");
@@ -20,6 +20,12 @@
             document.write("Bookkeeper : " + coworkers.bookkeeper + "<br>");
             coworkers["data scientist"] = "dangdangbase";
             document.write("Data Scientist : " + coworkers["data scientist"] + "<br>");
+        </script>
+        <h2>Iterate</h2>
+        <script>
+            for(var key in coworkers) { // coworkers 안의 key의 수 만큼 반복
+                document.write(key + " : " + coworkers[key] + "<br>");
+            }
         </script>
     </body>
 </html>
