@@ -16,7 +16,7 @@
             };
             document.write("Programmer : " + coworkers.programmer + "<br>");
             document.write("Designer : " + coworkers.designer + "<br>");
-            coworkers.bookkeeper = "osj";
+            coworkers.bookkeeper = "osj"; // 객체에 소속된 변수 : 프로퍼티(Property)
             document.write("Bookkeeper : " + coworkers.bookkeeper + "<br>");
             coworkers["data scientist"] = "dangdangbase";
             document.write("Data Scientist : " + coworkers["data scientist"] + "<br>");
@@ -26,6 +26,16 @@
             for(var key in coworkers) { // coworkers 안의 key의 수 만큼 반복
                 document.write(key + " : " + coworkers[key] + "<br>");
             }
+        </script>
+        <h2>Property & Method</h2>
+        <script>
+            coworkers.showAll = function() {
+                for(var key in this) { // coworkers 안의 key의 수 만큼 반복
+                    if (key == "showAll") continue; // 자신 제외
+                    document.write(key + " : " + this[key] + "<br>");
+                }
+            }
+            coworkers.showAll(); // 객체에 소속된 함수 : 메소드(Method)
         </script>
     </body>
 </html>
